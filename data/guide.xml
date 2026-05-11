@@ -22,8 +22,12 @@
 		<p>The Weather Channel<br/>Ch. 95</p>
 	</ad>
 </ads>
-<channel number="2" name="HTLNFO">
-	<listing timeslot="1" type="1" data2="0" data3="0" data4="0" continuous="continuous">Hotel Information</listing>
+<channel number="1" name="CPA">
+	<notice>With imagination, all things are possible.</notice>
+	<listing timeslot="1" type="1" data2="0" data4="0" continous="continuous">Centralia Princess Access</listing>
+</channel>
+<channel number="2" name="WX">
+	<listing timeslot="1" type="1" data2="0" data3="0" data4="0" continuous="continuous">Local Weather</listing>
 </channel>
 <channel number="3" name="KCBS">
 	<notice>The Greenhill County public offices will be closed to the public Monday, May 3, 1999 for renovation.</notice>
