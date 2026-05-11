@@ -18,7 +18,7 @@
 		<p>1-800-CALL-ATT</p>
 	</ad>
 	<ad duration="30">
-		<p>Greenhill Weather<br/>Most dependable forecast</p>
+		<p>Centralia Weather<br/>Most dependable forecast</p>
 		<p>The Weather Channel<br/>Ch. 95</p>
 	</ad>
 </ads>
@@ -313,12 +313,8 @@
 	<listing timeslot="45" type="1" data2="34" data3="0" data4="0" rating="G">Walt Disney Presents </listing>
 	<listing timeslot="47" type="movie" data2="1" data3="7" data4="0" rating="G">"The Littlest Horse Thieves"  (1976) Alastair Sim, Peter Barkworth. Three children determine to save coal-mine pit ponies in 1909 Yorkshire. (1 hr 44 min)</listing>
 </channel>
-<channel number="38" name="CNHN">
-	<listing timeslot="19" type="1" data2="0" data3="0" data4="0">Headline News (Cont.)</listing>
-	<listing timeslot="25" type="1" data2="0" data3="0" data4="0">Headline News (Cont.)</listing>
-	<listing timeslot="31" type="1" data2="0" data3="0" data4="0">Headline News (Cont.)</listing>
-	<listing timeslot="37" type="1" data2="22" data3="0" data4="0">Headline News</listing>
-	<listing timeslot="43" type="1" data2="0" data3="0" data4="0">Headline News (Cont.)</listing>
+<channel number="38" name="CTVN">
+	<listing timeslot="10" type="1" data2="0" data3="0" data4="0">CenTV Morning News</listing>
 </channel>
 <channel number="42" name="MTVW01">
 	<listing timeslot="19" type="1" data2="34" data3="0" data4="0">Will TV</listing>
@@ -553,6 +549,6 @@
 	<notice>Order "The Blair Witch Project", "Election", or "Life is Beautiful", this month using Easy Touch Pay Per View and get $1 off the price - pay only $2.95! Watch Sneak Prevue for play dates and times</notice>
 </channel>
 <channel noticeonly="noticeonly">
-	<notice>Candy Kingdom Cable Comm., Inc</notice>
+	<notice>Royal Centralia Television</notice>
 </channel>
 </guide>
