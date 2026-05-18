@@ -15,6 +15,9 @@ class Channel {
         console.log('Showing channel');
     }
 
+    ready() {
+    }
+
     teardown() {
         console.log('Tearing down');
         for (var i in this.timeouts) {

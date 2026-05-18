@@ -4,50 +4,56 @@
  */
 @font-face {
   font-family: VCR;
-  src: url(fonts/VCR_OSD.ttf); }
-
+  src: url(fonts/VCR_OSD.ttf);
+}
 @font-face {
   font-family: PrevueGrid;
-  src: url(fonts/PrevueGrid.ttf); }
-
+  src: url(fonts/PrevueGrid.ttf);
+}
 /* colors */
 /* REGULAR SCANLINES SETTINGS */
 /* MOVING SCANLINE SETTINGS */
 /* MIXINS */
 /* CSS .scanlines CLASS */
 .scanlines {
-  overflow: hidden; }
-  .scanlines:before, .scanlines:after {
-    display: block;
-    pointer-events: none;
-    content: '';
-    position: absolute; }
-  .scanlines:before {
-    width: 100%;
-    height: 2px;
-    z-index: 11;
-    background: rgba(0, 0, 0, 0.18);
-    opacity: 0.75;
-    animation: none; }
-  .scanlines:after {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.18) 51%);
-    background-size: 100% 4px;
-    animation: scanlines 1s steps(60) infinite; }
+  overflow: hidden;
+}
+.scanlines:before, .scanlines:after {
+  display: block;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+}
+.scanlines:before {
+  width: 100%;
+  height: 2px;
+  z-index: 11;
+  background: rgba(0, 0, 0, 0.18);
+  opacity: 0.75;
+  animation: none;
+}
+.scanlines:after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.18) 51%);
+  background-size: 100% 4px;
+  animation: scanlines 1s steps(60) infinite;
+}
 
 /* ANIMATE UNIQUE SCANLINE */
 @keyframes scanline {
   0% {
-    transform: translate3d(0, 200000%, 0); } }
-
+    transform: translate3d(0, 200000%, 0);
+  }
+}
 @keyframes scanlines {
   0% {
-    background-position: 0 50%; } }
-
+    background-position: 0 50%;
+  }
+}
 /**
  * TV Simulator '99
  * Zach Hall, 2017
@@ -57,135 +63,159 @@ body {
   color: #aaaaaa;
   -webkit-text-stroke: 1px #111111;
   margin: 0;
-  padding: 0; }
-  body * {
-    font-family: "PrevueGrid";
-    font-size: 30px; }
-  body a, body a:visited {
-    color: #223388; }
-  body a:active, body a:hover, body .yellow, body .time, body .channel {
-    color: #cccc00; }
-  body .about {
-    background: #111111;
-    border: #aaaaaa solid 5px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-    padding: 10px;
-    width: 400px; }
-  body #about-button {
-    position: absolute;
-    right: 346px;
-    z-index: 1000;
-    width: 50px;
-    height: 47px;
-    bottom: -14px;
-    border-radius: 50px;
-    cursor: pointer; }
-  body #tv-mute {
-    position: absolute;
-    border-radius: 50px;
-    cursor: pointer;
-    z-index: 1000;
-    width: 20px;
-    height: 20px;
-    top: 883;
-    left: 487; }
+  padding: 0;
+}
+body * {
+  font-family: "PrevueGrid";
+  font-size: 30px;
+}
+body a, body a:visited {
+  color: #223388;
+}
+body a:active, body a:hover, body .yellow, body .time, body .channel {
+  color: #cccc00;
+}
+body .about {
+  background: #111111;
+  border: #aaaaaa solid 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 10px;
+  width: 400px;
+}
+body #about-button {
+  position: absolute;
+  right: 346px;
+  z-index: 1000;
+  width: 50px;
+  height: 47px;
+  bottom: -14px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+body #tv-mute {
+  position: absolute;
+  border-radius: 50px;
+  cursor: pointer;
+  z-index: 1000;
+  width: 20px;
+  height: 20px;
+  top: 883px;
+  left: 487px;
+}
 
 /* page */
 .tv {
   position: absolute;
   width: 1200px;
   height: 900px;
-  left: -webkit-calc(50% - 600px);
-  transform-origin: top; }
-  .tv .tv-mask {
-    position: absolute;
-    z-index: 100;
-    width: 100%;
-    pointer-events: none; }
-  .tv .screen .tv-messages #tvm-bottom-left {
-    position: absolute;
-    left: 250;
-    bottom: 200;
-    font-family: VCR;
-    font-size: 45;
-    z-index: 50;
-    color: #cccc00; }
-  .tv .screen .tv-messages #tvm-top-right {
-    position: absolute;
-    top: 160;
-    right: 230;
-    z-index: 50;
-    text-align: right;
-    font-size: 3em;
-    color: #cccc00;
-    font-family: VCR; }
+  left: calc(50% - 600px);
+  transform-origin: top;
+}
+.tv .tv-mask {
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  pointer-events: none;
+}
+.tv .screen .tv-messages #tvm-bottom-left {
+  position: absolute;
+  left: 250px;
+  bottom: 200px;
+  font-family: VCR;
+  font-size: 45px;
+  z-index: 50;
+  color: #cccc00;
+}
+.tv .screen .tv-messages #tvm-top-right {
+  position: absolute;
+  top: 160px;
+  right: 230px;
+  z-index: 50;
+  text-align: right;
+  font-size: 3em;
+  color: #cccc00;
+  font-family: VCR;
+}
 
 .tv .screen #ch-12 .video-right {
   position: absolute;
-  right: 169;
-  top: 128;
-  width: 450;
-  height: 360; }
-
+  right: 169px;
+  top: 128px;
+  width: 450px;
+  height: 360px;
+}
 .tv .screen #ch-12 .video-left {
   background: #000033;
   position: absolute;
-  top: 128;
-  left: 156;
-  width: 425;
-  height: 360;
-  text-align: center; }
-  .tv .screen #ch-12 .video-left p {
-    padding-left: 50px;
-    line-height: 1.8; }
-
+  top: 128px;
+  left: 156px;
+  width: 425px;
+  height: 360px;
+  text-align: center;
+}
+.tv .screen #ch-12 .video-left p {
+  padding-left: 50px;
+  line-height: 1.8;
+}
 .tv .screen #ch-12 .guide-container {
   position: absolute;
-  bottom: 100;
-  left: 155;
-  height: 325;
+  bottom: 100px;
+  left: 155px;
+  height: 325px;
   background-color: #111111;
   background-image: url("../img/backdrop.png");
   background-position: 70px;
-  overflow: hidden; }
-  .tv .screen #ch-12 .guide-container .guide-table {
-    width: 850;
-    height: 20;
-    margin: 0;
-    padding: 0;
-    /* boxes */ }
-    .tv .screen #ch-12 .guide-container .guide-table th, .tv .screen #ch-12 .guide-container .guide-table td {
-      border: solid 5px;
-      border-top-color: #aaaaaa;
-      border-left-color: #aaaaaa;
-      border-bottom-color: #111111;
-      border-right-color: #111111; }
-    .tv .screen #ch-12 .guide-container .guide-table th {
-      background-color: #223388;
-      width: 25%; }
-      .tv .screen #ch-12 .guide-container .guide-table th.realtime {
-        text-align: right; }
-    .tv .screen #ch-12 .guide-container .guide-table td {
-      background: #000055;
-      vertical-align: top;
-      padding: 5px; }
-      .tv .screen #ch-12 .guide-container .guide-table td.movie {
-        background: linear-gradient(to bottom, #3336ac 0%, #3432da 30%, #353253 100%); }
-      .tv .screen #ch-12 .guide-container .guide-table td.summary {
-        background: #555555; }
-      .tv .screen #ch-12 .guide-container .guide-table td.notice {
-        padding-left: 45px;
-        background: linear-gradient(to bottom, #862c2c 0%, #ce2434 30%, #4b2624 100%); }
-      .tv .screen #ch-12 .guide-container .guide-table td.date {
-        text-align: center;
-        color: #cccc00; }
-      .tv .screen #ch-12 .guide-container .guide-table td.channel {
-        text-align: center;
-        padding-left: 2em; }
-      .tv .screen #ch-12 .guide-container .guide-table td .continued-right {
-        -webkit-text-stroke: 0;
-        float: right;
-        vertical-align: middle; }
+  overflow: hidden;
+}
+.tv .screen #ch-12 .guide-container .guide-table {
+  width: 850px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  /* boxes */
+}
+.tv .screen #ch-12 .guide-container .guide-table th, .tv .screen #ch-12 .guide-container .guide-table td {
+  border: solid 5px;
+  border-top-color: #aaaaaa;
+  border-left-color: #aaaaaa;
+  border-bottom-color: #111111;
+  border-right-color: #111111;
+}
+.tv .screen #ch-12 .guide-container .guide-table th {
+  background-color: #223388;
+  width: 25%;
+}
+.tv .screen #ch-12 .guide-container .guide-table th.realtime {
+  text-align: right;
+}
+.tv .screen #ch-12 .guide-container .guide-table td {
+  background: #000055;
+  vertical-align: top;
+  padding: 5px;
+}
+.tv .screen #ch-12 .guide-container .guide-table td.movie {
+  background: linear-gradient(to bottom, rgb(51, 54, 172) 0%, rgb(52, 50, 218) 30%, rgb(53, 50, 83) 100%);
+}
+.tv .screen #ch-12 .guide-container .guide-table td.summary {
+  background: #555555;
+}
+.tv .screen #ch-12 .guide-container .guide-table td.notice {
+  padding-left: 45px;
+  background: linear-gradient(to bottom, rgb(134, 44, 44) 0%, rgb(206, 36, 52) 30%, rgb(75, 38, 36) 100%);
+}
+.tv .screen #ch-12 .guide-container .guide-table td.date {
+  text-align: center;
+  color: #cccc00;
+}
+.tv .screen #ch-12 .guide-container .guide-table td.channel {
+  text-align: center;
+  padding-left: 2em;
+}
+.tv .screen #ch-12 .guide-container .guide-table td .continued-right {
+  -webkit-text-stroke: 0;
+  float: right;
+  vertical-align: middle;
+}
