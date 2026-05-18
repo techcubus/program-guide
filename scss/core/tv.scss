@@ -52,8 +52,8 @@ body {
         z-index: 1000;
         width: 20px;
         height: 20px;
-        top: 883;
-        left: 487;
+        top: 883px;
+        left: 487px;
     }
 }
 
@@ -62,7 +62,7 @@ body {
     position: absolute;
     width: 1200px;
     height: 900px;
-    left: -webkit-calc(50% - 600px);
+    left: calc(50% - 600px);
     transform-origin: top;
 
     .tv-mask {
@@ -76,17 +76,17 @@ body {
         .tv-messages {
             #tvm-bottom-left {
                 position: absolute;
-                left: 250;
-                bottom: 200;
+                left: 250px;
+                bottom: 200px;
                 font-family: VCR;
-                font-size: 45;
+                font-size: 45px;
                 z-index: 50;
                 color: $yellow;
             }
             #tvm-top-right {
                 position: absolute;
-                top: 160;
-                right: 230;
+                top: 160px;
+                right: 230px;
                 z-index: 50;
                 text-align: right;
                 font-size: 3em;

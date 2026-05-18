@@ -16,18 +16,23 @@ class Channel12 extends Channel {
     show() {
         super.show();
 
+        var playlist = guideData.find('playlist');
+        var videoId = guideData.find('video').attr('id') || '9NSVU4Gv_wA';
+        this.shuffle = playlist.length && playlist.attr('shuffle') === 'true';
+        this.playlistId = playlist.length ? playlist.attr('id') : null;
+
         this.player = new YT.Player('ytplayer', {
             height: '360',
             width: '425',
-            videoId: '9NSVU4Gv_wA',
+            videoId: videoId,
             events: {
-            'onReady': this.onPlayerReady,
-            'onStateChange': this.onPlayerStateChange
+                'onReady': (event) => this.onPlayerReady(event),
+                'onStateChange': (event) => this.onPlayerStateChange(event)
             },
-            playerVars: { 
+            playerVars: {
                 'autoplay': 1,
-                'controls': 0, 
-                'rel' : 0
+                'controls': 0,
+                'rel': 0
             }
         });
 
@@ -178,15 +183,27 @@ class Channel12 extends Channel {
     // YouTube
     // The API will call this function when the video player is ready.
     onPlayerReady(event) {
-        event.target.playVideo();
+        if (this.playlistId) {
+            event.target.loadPlaylist({
+                list: this.playlistId,
+                listType: 'playlist'
+            });
+        } else {
+            event.target.playVideo();
+        }
     }
 
     // Te API calls this function when the player's state changes.
     //    The function indicates that when playing a video (state=1),
     //    the player should play for six seconds and then stop.
     onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING) {
-            console.log('Playing...');
+        if (event.data == YT.PlayerState.CUED && this.shuffle && !this.shuffled) {
+            this.shuffled = true;
+            event.target.setShuffle(true);
+            var playlist = event.target.getPlaylist();
+            if (playlist && playlist.length > 0) {
+                event.target.playVideoAt(Math.floor(Math.random() * playlist.length));
+            }
         }
     }
 
